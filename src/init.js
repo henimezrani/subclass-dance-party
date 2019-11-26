@@ -1,5 +1,9 @@
 $(document).ready(function() {
   window.dancers = [];
+  //window.list=["assets/omar.png","assets/matt.png","assets/youssef.png","assets/seif.png","assets/walid.png"];
+  window.names=["omar","matt","youssef","seif","walid"];
+  window.leftV=[300,500,100,700,900];
+  window.count=0;
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -22,12 +26,21 @@ $(document).ready(function() {
 
     // make a dancer with a random position
 
-    var dancer = dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+    var dancer = new dancerMakerFunction(
+      50,
+     leftV[count],
       Math.random() * 1000
     );
+    dancer.setPosition();
+    dancer.step();
+    dancer.$node.attr("src", "assets/" + names[dancer.count] + ".png")
+    //console.log(dancer.$node)
+
     $('body').append(dancer.$node);
+    count++;
+    if (count === 5) {
+      count =0
+    }
   });
 });
 
