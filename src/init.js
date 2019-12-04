@@ -29,7 +29,7 @@ $(document).ready(function() {
     var dancer = new dancerMakerFunction(
       50,
      leftV[count],
-      Math.random() * 1000
+      Math.random() * 500
     );
     dancer.setPosition();
     dancer.step();
