@@ -1,0 +1,30 @@
+body, html{
+  height:100%;
+  overflow: hidden;
+  width: 100%;
+}
+body{
+  margin: 0px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url(assets/gifs/background.jfif);
+  font-size: 18px;
+}
+body, a:link, a:visited, a:active{
+  color: lightblue;
+}
+.title, .addDancerButton{
+  padding:5px 12px;
+  float:right;
+}
+.topbar{
+  height:32px;
+  background-color: #555;
+}
+.title{
+  background-color: #777;
+}
+.dancer{
+  position:absolute;
+ background-image: url("");
+}
